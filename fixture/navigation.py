@@ -15,6 +15,11 @@ class NavigationHelper:
         if not wd.current_url.endswith("/mantisbt-1.2.20/"):
             wd.get("http://localhost/mantisbt-1.2.20/")
 
+    def open_registration_page(self):
+        wd = self.app.wd
+        if not wd.current_url.endswith("/signup_page.php"):
+            wd.get("http://localhost/mantisbt-1.2.20/")
+
     def open_project_page(self):
         wd = self.app.wd
         if not wd.current_url.endswith("/manage_proj_page.php"):

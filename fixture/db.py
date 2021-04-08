@@ -10,6 +10,7 @@ class DbFixture:
         self.password = password
         self.connection = pymysql.connect(host=host, database=name, user=user, password=password, autocommit=True)
 
+
     def get_projects_list(self):
         list = []
         cursor = self.connection.cursor()
