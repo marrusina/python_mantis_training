@@ -24,13 +24,13 @@ class Application:
         self.session = SessionHelper(self)
         self.navigation = NavigationHelper(self)
         self.james =JamesHelper(self)
-        self.soap = SoapHelper(self)
         self.project = ProjectHelper(self)
         self.signup = SignupHelper(self)
         self.mail = MailHelper(self)
         self.config = config
         self.base_url = config['web']['baseUrl']
         self.password = config['web']['password']
+        self.soap = SoapHelper(self)
 
     def is_element_present(self, how, what):
         try:

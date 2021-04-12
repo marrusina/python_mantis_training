@@ -13,6 +13,7 @@ target = None
 def config(request):
     return load_config(request.config.getoption("--target"))
 
+
 @pytest.fixture
 def app(request, config):
     global fixture
